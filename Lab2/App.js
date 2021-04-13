@@ -1,43 +1,90 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Screen from '../Lab2/Screen'
+import { View } from 'react-native';
+
+import MyButton from '../Lab2/components/MyButton'
+import ScreenSpreadSyntax from '../Lab2/components/ScreenSpreadSyntax'
+import ScreenRestParameters from '../Lab2/components/ScreenRestParameters'
+import ScreenHookState from '../Lab2/components/ScreenHookState'
+
+import styles from '../Lab2/styles'
 
 function RedScreen({navigation}) {
   return (
-    <Screen 
-      navigation={navigation}
-      button1Title='Go to Green'
-      button1Route='Green'
-      button2Title='Go to Blue'
-      button2Route='Blue'
-    />
+    <View style={styles.redStyle}>
+      <View style={{flex: 1}}>
+        <MyButton 
+          navigation = {navigation}
+          buttonColor = 'red'
+          buttonTitle = 'Rest Parameters Info'
+          buttonRoute = 'Green'
+        />
+      </View>
+      <View style={{flex: 1}}>
+        <MyButton
+          navigation = {navigation}
+          buttonColor = 'red'
+          buttonTitle = 'Hook useState Info'
+          buttonRoute = 'Purple'
+        />
+      </View>
+      <View style={{flex: 10}}>
+        <ScreenSpreadSyntax/>
+      </View>
+    </View>
   )
 }
 
 function GreenScreen({navigation}) {
   return (
-    <Screen 
-      navigation={navigation}
-      button1Title='Go to Red'
-      button1Route='Red'
-      button2Title='Go to Blue'
-      button2Route='Blue'
-    />
+    <View style={styles.greenStyle}>
+      <View style={{flex: 1}}>
+        <MyButton
+          navigation={navigation}
+          buttonColor = 'green'
+          buttonTitle='Spread syntax (...) Info'
+          buttonRoute='Red'
+        />
+      </View>
+      <View style={{flex: 1}}>
+        <MyButton
+          navigation={navigation}
+          buttonColor = 'green'
+          buttonTitle='Hook useState Info'
+          buttonRoute='Purple'
+        />
+      </View>
+      <View style={{flex: 1}}>
+        <ScreenRestParameters/>
+      </View>
+    </View>
   )
 }
 
-function BlueScreen({navigation}) {
+function PurpleScreen({navigation}) {
   return (
-    <Screen 
-      navigation={navigation}
-      button1Title='Go to Red'
-      button1Route='Red'
-      button2Title='Go to Green'
-      button2Route='Green'
-  />
+    <View style={styles.purpleStyle}>
+      <View style={{flex: 1}}>
+        <MyButton 
+          navigation = {navigation}
+          buttonColor = 'purple'
+          buttonTitle = 'Spread syntax (...) Info'
+          buttonRoute = 'Red'
+        />
+      </View>
+      <View style={{flex: 1}}>
+        <MyButton
+          navigation = {navigation}
+          buttonColor = 'purple'
+          buttonTitle = 'Rest Parameters Info'
+          buttonRoute = 'Green'
+        />
+      </View>
+      <View style={{flex: 1}}>
+        <ScreenHookState/>
+      </View>
+    </View>
   )
 }
 
@@ -47,19 +94,22 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Screen1">
-        <Stack.Screen name="Red" component={RedScreen} />
-        <Stack.Screen name="Green" component={GreenScreen} />
-        <Stack.Screen name="Blue" component={BlueScreen} />
+        <Stack.Screen
+          name="Red" 
+          component={RedScreen} 
+          options={{ title: 'Spread syntax (...)' }}
+        />
+        <Stack.Screen 
+          name="Green" 
+          component={GreenScreen}
+          options={{ title: 'Rest parameters' }} 
+        />
+        <Stack.Screen
+          name="Purple" 
+          component={PurpleScreen} 
+          options={{ title: 'Hook useState' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
