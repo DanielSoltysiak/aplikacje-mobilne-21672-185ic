@@ -1,10 +1,11 @@
 import React, { Suspense } from 'react';
 import { NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { View, Text } from 'react-native';
+import { ActivityIndicator, View, Text } from 'react-native';
 
 import MyButton from './components/MyButton'
 import SortedNumbers from './components/SortedNumbers'
+import StepIndicator from './components/StepIndicator'
 
 import styles from './styles'
 
@@ -13,13 +14,14 @@ const SortedLetters = React.lazy(() => import('./components/SortedLetters'))
 function FirstScreen({navigation}) {
   return (
     <View>
+    <View>
       <MyButton
         navigation = {navigation}
-        buttonColor = "blue"
         buttonTitle = "Next"
         buttonRoute = "Second"
       />
       <SortedNumbers/>
+    </View>
     </View>
   )
 }
@@ -27,6 +29,11 @@ function FirstScreen({navigation}) {
 function SecondScreen({navigation}) {
   return (
     <View>
+      <MyButton
+        navigation = {navigation}
+        buttonTitle = "Next"
+        buttonRoute = "Third"
+      />
       <Suspense fallback={<Text>Wczytywanie...</Text>}>
         <SortedLetters/>
       </Suspense>
@@ -37,7 +44,13 @@ function SecondScreen({navigation}) {
 function ThirdScreen({navigation}) {
   return (
     <View>
-
+      <MyButton
+        navigation = {navigation}
+        buttonTitle = "Next"
+        buttonRoute = "Fourth"
+      />
+      <StepIndicator position = {0}/>
+      <ActivityIndicator size="large" color="lightpink"/>
     </View>
   )
 }
@@ -45,7 +58,13 @@ function ThirdScreen({navigation}) {
 function FourthScreen({navigation}) {
   return (
     <View>
-
+      <MyButton
+        navigation = {navigation}
+        buttonTitle = "Next"
+        buttonRoute = "Fifth"
+      />
+      <StepIndicator position = {1}/>
+      <ActivityIndicator color="lightpink"/>
     </View>
   )
 }
@@ -53,7 +72,13 @@ function FourthScreen({navigation}) {
 function FifthScreen({navigation}) {
   return (
     <View>
-
+      <MyButton
+        navigation = {navigation}
+        buttonTitle = "Next"
+        buttonRoute = "First"
+      />
+      <StepIndicator position = {2}/>
+      <ActivityIndicator color="lightgrey"/>
     </View>
   )
 }
