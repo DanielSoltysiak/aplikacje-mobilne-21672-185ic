@@ -1,83 +1,59 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
-import MyButton from '../Lab3/components/MyButton'
+import MyButton from './components/MyButton'
+import SortedNumbers from './components/SortedNumbers'
 
-import styles from '../Lab3/styles'
+import styles from './styles'
 
-function RedScreen({navigation}) {
+const SortedLetters = React.lazy(() => import('./components/SortedLetters'))
+
+function FirstScreen({navigation}) {
   return (
-    <View style={styles.redStyle}>
-      <View style={{flex: 1}}>
-        <MyButton 
-          navigation = {navigation}
-          buttonColor = 'red'
-          buttonTitle = 'Rest Parameters Info'
-          buttonRoute = 'Green'
-        />
-      </View>
-      <View style={{flex: 1}}>
-        <MyButton
-          navigation = {navigation}
-          buttonColor = 'red'
-          buttonTitle = 'Hook useState Info'
-          buttonRoute = 'Purple'
-        />
-      </View>
-      <View style={{flex: 10}}>
-      </View>
+    <View>
+      <MyButton
+        navigation = {navigation}
+        buttonColor = "blue"
+        buttonTitle = "Next"
+        buttonRoute = "Second"
+      />
+      <SortedNumbers/>
     </View>
   )
 }
 
-function GreenScreen({navigation}) {
+function SecondScreen({navigation}) {
   return (
-    <View style={styles.greenStyle}>
-      <View style={{flex: 1}}>
-        <MyButton
-          navigation={navigation}
-          buttonColor = 'green'
-          buttonTitle='Spread syntax (...) Info'
-          buttonRoute='Red'
-        />
-      </View>
-      <View style={{flex: 1}}>
-        <MyButton
-          navigation={navigation}
-          buttonColor = 'green'
-          buttonTitle='Hook useState Info'
-          buttonRoute='Purple'
-        />
-      </View>
-      <View style={{flex: 1}}>
-      </View>
+    <View>
+      <Suspense fallback={<Text>Wczytywanie...</Text>}>
+        <SortedLetters/>
+      </Suspense>
     </View>
   )
 }
 
-function PurpleScreen({navigation}) {
+function ThirdScreen({navigation}) {
   return (
-    <View style={styles.purpleStyle}>
-      <View style={{flex: 1}}>
-        <MyButton 
-          navigation = {navigation}
-          buttonColor = 'purple'
-          buttonTitle = 'Spread syntax (...) Info'
-          buttonRoute = 'Red'
-        />
-      </View>
-      <View style={{flex: 1}}>
-        <MyButton
-          navigation = {navigation}
-          buttonColor = 'purple'
-          buttonTitle = 'Rest Parameters Info'
-          buttonRoute = 'Green'
-        />
-      </View>
-      <View style={{flex: 1}}>
-      </View>
+    <View>
+
+    </View>
+  )
+}
+
+function FourthScreen({navigation}) {
+  return (
+    <View>
+
+    </View>
+  )
+}
+
+function FifthScreen({navigation}) {
+  return (
+    <View>
+
     </View>
   )
 }
@@ -87,21 +63,29 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Screen1">
+      <Stack.Navigator initialRouteName="First">
         <Stack.Screen
-          name="Red" 
-          component={RedScreen} 
-          options={{ title: 'Spread syntax (...)' }}
+          name="First" 
+          component={FirstScreen} 
+          options={{ title: 'Posortowane i przefiltrowane liczby' }}
         />
         <Stack.Screen 
-          name="Green" 
-          component={GreenScreen}
+          name="Second" 
+          component={SecondScreen}
           options={{ title: 'Rest parameters' }} 
         />
         <Stack.Screen
-          name="Purple" 
-          component={PurpleScreen} 
+          name="Third" 
+          component={ThirdScreen} 
           options={{ title: 'Hook useState' }}
+        />
+        <Stack.Screen
+          name="Fourth"
+          component={FourthScreen}
+        />
+        <Stack.Screen
+          name="Fifth"
+          component={FifthScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

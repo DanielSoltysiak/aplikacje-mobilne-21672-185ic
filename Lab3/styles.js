@@ -13,17 +13,6 @@ const styles = StyleSheet.create({
     },
     separator: {
         marginVertical: 2
-    },
-    redStyle: {
-        flex: 1,
-    }, 
-    greenStyle: {
-        flex: 1,
-        flexDirection: 'column-reverse'
-    },
-    purpleStyle: {
-        flex: 1,
-        alignItems: 'center'
     }
 })
 
