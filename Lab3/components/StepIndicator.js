@@ -1,7 +1,7 @@
 import React from 'react';
 import StepIndicator from 'react-native-step-indicator';
 
-const labels = ["uno", "dos", "tres"];
+const labels = ["Krok 1", "Krok 2", "Krok 3"];
 const customStyles = {
   stepIndicatorSize: 25,
   currentStepIndicatorSize:30,
