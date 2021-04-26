@@ -5,6 +5,7 @@ import { View } from 'react-native';
 
 import MyButton from './components/MyButton'
 import TextInputCap from './components/TextInputCap'
+import Select from './components/Select'
 
 function FirstScreen({navigation}) {
   return (
@@ -27,6 +28,7 @@ function SecondScreen({navigation}) {
         buttonTitle = "Next"
         buttonRoute = "Third"
       />
+      <Select/>
     </View>
   )
 }
@@ -76,12 +78,12 @@ export default function App() {
         <Stack.Screen
           name="First" 
           component={FirstScreen} 
-          options={{ title: 'możliwości komponentu TextInput' }}
+          options={{ title: 'Możliwości komponentu TextInput' }}
         />
         <Stack.Screen 
           name="Second" 
           component={SecondScreen}
-          options={{ title: 'Posortowane Litery' }} 
+          options={{ title: 'Select' }} 
         />
         <Stack.Screen
           name="Third" 
