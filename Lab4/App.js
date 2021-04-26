@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { View } from 'react-native';
 
 import MyButton from './components/MyButton'
+import TextInputCap from './components/TextInputCap'
 
 function FirstScreen({navigation}) {
   return (
@@ -13,6 +14,7 @@ function FirstScreen({navigation}) {
         buttonTitle = "Next"
         buttonRoute = "Second"
       />
+      <TextInputCap/>
     </View>
   )
 }
@@ -74,7 +76,7 @@ export default function App() {
         <Stack.Screen
           name="First" 
           component={FirstScreen} 
-          options={{ title: 'Posortowane liczby' }}
+          options={{ title: 'możliwości komponentu TextInput' }}
         />
         <Stack.Screen 
           name="Second" 
