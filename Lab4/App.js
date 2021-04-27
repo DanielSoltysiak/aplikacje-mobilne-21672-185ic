@@ -6,6 +6,7 @@ import { View } from 'react-native';
 import MyButton from './components/MyButton'
 import TextInputCap from './components/TextInputCap'
 import Select from './components/Select'
+import RandNumSwitch from './components/RandNumSwitch'
 
 function FirstScreen({navigation}) {
   return (
@@ -41,6 +42,7 @@ function ThirdScreen({navigation}) {
           buttonTitle = "Next"
           buttonRoute = "Fourth"
         />
+        <RandNumSwitch/>
     </View>
   )
 }
@@ -88,7 +90,7 @@ export default function App() {
         <Stack.Screen
           name="Third" 
           component={ThirdScreen} 
-          options={{ title: 'Krok 1' }}
+          options={{ title: 'Switch & Modal' }}
         />
         <Stack.Screen
           name="Fourth"

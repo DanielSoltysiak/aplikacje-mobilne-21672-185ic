@@ -12,7 +12,7 @@ const TextInputCap = () => {
             <TextInput
                 style={styles.txtInput}
                 placeholder='Wpisz przykładowy tekst'
-                placeholderTextColor='lightpink'
+                placeholderTextColor='#034f84'
             />
             <Text>
                 autoCapitalize='words'
@@ -51,11 +51,11 @@ const TextInputCap = () => {
                 textAlign='center'
             />
             <Text>
-                underlineColorAndroid={'red'}
+                underlineColorAndroid={'#034f84'}
             </Text>
             <TextInput
                 style={styles.txtInput}
-                underlineColorAndroid={'red'}
+                underlineColorAndroid={'#034f84'}
             />
         </View>
     )

@@ -4,7 +4,7 @@ import { Button, View } from 'react-native';
 function MyButton(props) {
     return (
         <Button
-          color = 'palevioletred'
+          color = '#c94c4c'
           title = {props.buttonTitle}
           onPress = {() => props.navigation.navigate(props.buttonRoute)}
         />
