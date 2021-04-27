@@ -7,6 +7,7 @@ import MyButton from './components/MyButton'
 import TextInputCap from './components/TextInputCap'
 import Select from './components/Select'
 import RandNumSwitch from './components/RandNumSwitch'
+import DateTimeSelect from './components/DateTimeSelect'
 
 function FirstScreen({navigation}) {
   return (
@@ -55,6 +56,7 @@ function FourthScreen({navigation}) {
           buttonTitle = "Next"
           buttonRoute = "Fifth"
         />
+    <DateTimeSelect/>
     </View>
   )
 }
@@ -95,7 +97,7 @@ export default function App() {
         <Stack.Screen
           name="Fourth"
           component={FourthScreen}
-          options={{ title: 'Krok 2' }}
+          options={{ title: 'Data i czas' }}
         />
         <Stack.Screen
           name="Fifth"
