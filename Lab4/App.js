@@ -8,6 +8,7 @@ import TextInputCap from './components/TextInputCap'
 import Select from './components/Select'
 import RandNumSwitch from './components/RandNumSwitch'
 import DateTimeSelect from './components/DateTimeSelect'
+import Toast from './components/Toast'
 
 function FirstScreen({navigation}) {
   return (
@@ -69,6 +70,7 @@ function FifthScreen({navigation}) {
           buttonTitle = "Next"
           buttonRoute = "First"
         />
+        <Toast/>
     </View>
   )
 }
@@ -102,7 +104,7 @@ export default function App() {
         <Stack.Screen
           name="Fifth"
           component={FifthScreen}
-          options={{ title: 'Krok 3' }}
+          options={{ title: 'Toast' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
