@@ -5,7 +5,7 @@ Celem laboratorium było zapoznanie się/pogłębienie więdzy o komponentach: T
 ## TextInput
 Na zrzucie poniżej widać komponenty TextInput z zastosowaniem różnych propsów.
 
-v
+![.](screenshots/textInput1.jpg)
 
 Widok klawiatury "numeric"
 
