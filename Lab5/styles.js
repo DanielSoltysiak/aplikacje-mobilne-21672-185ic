@@ -45,4 +45,23 @@ styles.scrTwoStyle = StyleSheet.create({
     },
 })
 
+styles.scrThreeStyle = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        paddingHorizontal: 10
+    },
+    smallContainer: {
+        alignItems: "center",
+        padding: 10
+    },
+    button: {
+        alignItems: "center",
+        backgroundColor: "#BDA7B0",
+        padding: 10
+    },
+    title: {
+        fontWeight: 'bold'
+    }
+})
 export default styles;
