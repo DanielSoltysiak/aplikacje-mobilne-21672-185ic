@@ -86,4 +86,35 @@ styles.modal = StyleSheet.create({
       }
 })
 
+styles.swipeable = StyleSheet.create({
+    listItem: {
+      height: 45,
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderWidth: 0.5,
+      borderColor: 'lightgrey',
+    },
+    leftSwipeItem: {
+      flex: 1,
+      alignItems: 'flex-end',
+      justifyContent: 'center',
+      paddingRight: 20,
+      borderWidth: 0.5,
+      borderColor: 'lightgrey'
+    },
+    rightSwipeItem: {
+      flex: 1,
+      justifyContent: 'center',
+      paddingLeft: 20,
+      borderWidth: 0.5,
+      borderColor: 'lightgrey'
+    },
+    dateTxt: {
+        fontSize: 20,
+    },
+    zodiacTxt: {
+        fontSize: 39,
+    }
+  });
+
 export default styles;

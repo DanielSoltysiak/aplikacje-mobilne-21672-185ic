@@ -7,6 +7,7 @@ import MyButton from './components/MyButton'
 import ScreenOne from './components/ScreenOne'
 import ScreenTwo from './components/ScreenTwo'
 import ScreenThree from './components/ScreenThree'
+import ScreenFour from './components/ScreenFour'
 
 function FirstScreen({navigation}) {
   return (
@@ -55,6 +56,7 @@ function FourthScreen({navigation}) {
           buttonTitle = "Next"
           buttonRoute = "First"
         />
+        <ScreenFour/>
     </View>
   )
 }
@@ -84,7 +86,7 @@ export default function App() {
         <Stack.Screen
           name="Fourth"
           component={FourthScreen}
-          options={{ title: 'Data i czas' }}
+          options={{ title: 'Swipeable' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
