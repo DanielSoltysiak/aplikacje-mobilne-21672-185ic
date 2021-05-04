@@ -53,7 +53,7 @@ styles.scrThreeStyle = StyleSheet.create({
     },
     smallContainer: {
         alignItems: "center",
-        padding: 10
+        padding: 10,
     },
     button: {
         alignItems: "center",
@@ -62,6 +62,28 @@ styles.scrThreeStyle = StyleSheet.create({
     },
     title: {
         fontWeight: 'bold'
-    }
+    },
+    txt: {
+        textAlign: 'center'
+    },
+    input: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        textAlign: 'center'
+      },
 })
+
+styles.modal = StyleSheet.create({
+      button: {
+        padding: 10,
+        backgroundColor: "#794D60"
+      },
+      buttonTextStyle: {
+        color: "white",
+        fontWeight: "bold",
+        textAlign: "center"
+      }
+})
+
 export default styles;

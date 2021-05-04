@@ -79,7 +79,7 @@ export default function App() {
         <Stack.Screen
           name="Third" 
           component={ThirdScreen} 
-          options={{ title: 'Switch & Modal' }}
+          options={{ title: 'Touchable Opacity & Highlight' }}
         />
         <Stack.Screen
           name="Fourth"
