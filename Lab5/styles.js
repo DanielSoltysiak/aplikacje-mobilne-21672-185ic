@@ -26,4 +26,23 @@ styles.scrOneStyle = StyleSheet.create({
     }
 })
 
+styles.scrTwoStyle = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        flexDirection: 'column'
+    },
+    txt: {
+        marginHorizontal: 10,
+        fontSize: 12,
+        textAlign: 'justify'
+    },
+    img: {
+        height: 255
+    },
+    scrollContents: {
+        margin: '2%'
+    },
+})
+
 export default styles;

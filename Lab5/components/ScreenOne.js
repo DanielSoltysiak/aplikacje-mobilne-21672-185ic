@@ -38,7 +38,6 @@ const ScreenOne = () => {
                             source={{uri: 'https://cdn.pixabay.com/photo/2011/12/14/12/17/galaxy-11098_1280.jpg'}}
                         />
                     </View>
-
                 </View>
             </ScrollView>
         </View>
