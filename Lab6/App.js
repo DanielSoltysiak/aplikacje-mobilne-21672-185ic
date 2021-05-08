@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { View } from 'react-native';
 
 import MyButton from './components/MyButton'
+import ScreenOne from './components/ScreenOne'
 
 function FirstScreen({navigation}) {
   return (
@@ -13,6 +14,7 @@ function FirstScreen({navigation}) {
         buttonTitle = "Next"
         buttonRoute = "Second"
       />
+      <ScreenOne/>
     </View>
   )
 }
