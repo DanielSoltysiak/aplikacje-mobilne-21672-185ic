@@ -9,4 +9,11 @@ styles.screenOne = StyleSheet.create({
     }
 })
 
+styles.screenFour = StyleSheet.create({
+    txt: {
+        textAlign: 'center',
+        fontSize: 18,
+    }
+})
+
 export default styles;

@@ -7,6 +7,8 @@ import MyButton from './components/MyButton'
 import ScreenOne from './components/ScreenOne'
 import ScreenTwo from './components/ScreenTwo'
 
+import ScreenFour from './components/ScreenFour'
+
 function FirstScreen({navigation}) {
   return (
     <View style={{flex:1}}>
@@ -53,6 +55,7 @@ function FourthScreen({navigation}) {
           buttonTitle = "Next"
           buttonRoute = "Fifth"
         />
+        <ScreenFour/>
     </View>
   )
 }
