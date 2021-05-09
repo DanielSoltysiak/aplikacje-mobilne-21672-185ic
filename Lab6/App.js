@@ -5,6 +5,7 @@ import { View } from 'react-native';
 
 import MyButton from './components/MyButton'
 import ScreenOne from './components/ScreenOne'
+import ScreenTwo from './components/ScreenTwo'
 
 function FirstScreen({navigation}) {
   return (
@@ -27,6 +28,7 @@ function SecondScreen({navigation}) {
         buttonTitle = "Next"
         buttonRoute = "Third"
       />
+      <ScreenTwo/>
     </View>
   )
 }

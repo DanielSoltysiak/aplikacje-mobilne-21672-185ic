@@ -14,7 +14,7 @@ const ScreenOne = () => {
             />
             <Image
                 style = {styles.screenOne.img}
-                source = {{uri: 'https://cdn.pixabay.com/photo/2015/05/15/14/21/architecture-768432_1280.jpg'}}
+                source = {{uri: 'https://cdn.pixabay.com/photo/2015/06/08/15/02/pug-801826_1280.jpg'}}
             />
         </View>
     )
