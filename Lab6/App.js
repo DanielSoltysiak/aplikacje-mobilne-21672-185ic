@@ -6,7 +6,7 @@ import { View } from 'react-native';
 import MyButton from './components/MyButton'
 import ScreenOne from './components/ScreenOne'
 import ScreenTwo from './components/ScreenTwo'
-
+import ScreenThree from './components/ScreenThree'
 import ScreenFour from './components/ScreenFour'
 import ScreenFive from './components/ScreenFive'
 import ScreenSix from './components/ScreenSix'
@@ -45,6 +45,7 @@ function ThirdScreen({navigation}) {
           buttonTitle = "Next"
           buttonRoute = "Fourth"
         />
+        <ScreenThree/>
     </View>
   )
 }
@@ -94,7 +95,7 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Sixth">
+      <Stack.Navigator initialRouteName="First">
         <Stack.Screen
           name="First" 
           component={FirstScreen} 

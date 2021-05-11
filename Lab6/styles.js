@@ -20,6 +20,17 @@ styles.screenOne = StyleSheet.create({
     }
 })
 
+styles.screenThree = StyleSheet.create({
+    img: {
+        height: 500,
+        width: '100%'
+    },
+    container: {
+        flex: 1,
+        flexDirection: 'row'
+    }
+})
+
 styles.screenFour = StyleSheet.create({
     txt: {
         textAlign: 'center',
