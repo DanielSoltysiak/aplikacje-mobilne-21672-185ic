@@ -8,6 +8,7 @@ import ScreenOne from './components/ScreenOne'
 import ScreenTwo from './components/ScreenTwo'
 
 import ScreenFour from './components/ScreenFour'
+import ScreenFive from './components/ScreenFive'
 
 function FirstScreen({navigation}) {
   return (
@@ -68,6 +69,7 @@ function FifthScreen({navigation}) {
         buttonTitle = "Next"
         buttonRoute = "Sixth"
       />
+      <ScreenFive/>
     </View>
   )
 }
@@ -90,7 +92,7 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="First">
+      <Stack.Navigator initialRouteName="Fifth">
         <Stack.Screen
           name="First" 
           component={FirstScreen} 
