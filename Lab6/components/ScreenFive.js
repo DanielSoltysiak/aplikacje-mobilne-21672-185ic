@@ -32,17 +32,17 @@ const ScreenFive = () => {
     const [searchKey, setSearchKey] = useState('');
 
     return (
-        <View style={styles.screenFive.container}>
-            <View style={styles.screenFive.container}>
+        <View style={styles.global.container}>
+            <View style={styles.global.container}>
                 <Text style={styles.screenFive.txt}>Podaj klucz:</Text> 
                 <TextInput
-                    style={styles.screenFive.txtInput}
+                    style={styles.global.txtInput}
                     onChangeText = {text => setKey(text)}
                     value = {key}
                 />
                 <Text style={styles.screenFive.txt}>Podaj wartość:</Text>
                 <TextInput
-                    style={styles.screenFive.txtInput}
+                    style={styles.global.txtInput}
                     onChangeText = {text => setValue(text)}
                     value = {value}
                 />
@@ -52,10 +52,10 @@ const ScreenFive = () => {
                     title = 'Zapisz dane'
                 />
             </View>
-            <View style={styles.screenFive.container}>
+            <View style={styles.global.container}>
                 <Text style={styles.screenFive.txt}>Podaj klucz dla jakiego chcesz znaleźć wartość:</Text>
                 <TextInput
-                    style={styles.screenFive.txtInput}
+                    style={styles.global.txtInput}
                     onChangeText = {text => setSearchKey(text)}
                     value = {searchKey}
                 />
