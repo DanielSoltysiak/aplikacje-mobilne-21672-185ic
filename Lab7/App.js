@@ -1,21 +1,51 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer} from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { View } from 'react-native';
+
+import MyButton from './components/MyButton'
+
+function FirstScreen({navigation}) {
+  return (
+    <View style={{flex:1}}>
+      <MyButton
+        navigation = {navigation}
+        buttonTitle = "Next"
+        buttonRoute = "Second"
+      />
+    </View>
+  )
+}
+
+function SecondScreen({navigation}) {
+  return (
+    <View>
+      <MyButton
+        navigation = {navigation}
+        buttonTitle = "Next"
+        buttonRoute = "First"
+      />
+    </View>
+  )
+}
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="First">
+        <Stack.Screen
+          name="First" 
+          component={FirstScreen} 
+          options={{ title: 'Pierwszy wariant' }}
+        />
+        <Stack.Screen 
+          name="Second" 
+          component={SecondScreen}
+          options={{ title: 'Drugi wariant' }} 
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
